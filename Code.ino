@@ -2,7 +2,6 @@
   == RFID Project "Secure Tag" ==
   Developed by: Yousuf Humran & The Null Labz Team
   Version: 1.0
-  License: MIT (or open use with credit)
 
   📟 Devices Used:
     - Arduino Nano
