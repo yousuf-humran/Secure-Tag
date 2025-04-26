@@ -1,0 +1,15 @@
+📚 Library Installation Guide
+To use this project, install the required libraries directly from the provided .zip files using the Arduino IDE:
+
+✅ Steps:
+1.Open the Arduino IDE.
+2.Go to the Sketch menu.
+3.Select Include Library → Add .ZIP Library...
+4.One by one, select and upload the following .zip files:
+  -Adafruit-GFX-Library-master.zip
+  -Adafruit_BusIO-master.zip
+  -Adafruit_ST7735-master.zip
+  -ArduinoCore-avr-master.zip
+  -rdm6300-master.zip
+
+💡 Once installed, restart the Arduino IDE if needed. The libraries will now be available for use in your sketches.
