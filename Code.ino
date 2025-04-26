@@ -1,5 +1,5 @@
 /*
-  == RFID Project R-Alpha ==
+  == RFID Project "Secure Tag" ==
   Developed by: Yousuf Humran - Null Labz
   Version: 1.0
   License: MIT (or open use with credit)
