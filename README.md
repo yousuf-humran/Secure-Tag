@@ -85,4 +85,4 @@ To use this project, install the required libraries directly from the `.zip` fil
 
 ## 👨‍💻 Developed by
 
-**Yousuf Humran – Null Labz**
+**Yousuf Humran & The Null Labz Team**
