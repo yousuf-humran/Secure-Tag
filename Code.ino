@@ -1,34 +1,3 @@
-/*
-  == RFID Project "Secure Tag" ==
-  Developed by: Yousuf Humran
-
-  📟 Devices Used:
-    - Arduino Nano
-    - RDM6300 RFID Reader (125kHz)
-    - 1.8" TFT Display (ST7735)
-
-  🧩 Wiring:
-
-  --- TFT Display ---
-    VCC  →  5V (Nano)
-    GND  →  GND
-    CS   →  D10
-    RESET→  D9
-    DC   →  D8
-    SDA  →  D11
-    SCL  →  D13
-    BL   →  5V
-
-  --- RDM6300 RFID Reader ---
-    VCC  →  5V
-    GND  →  GND
-    TX   →  D2 (Nano RX for SoftwareSerial)
-
-  Note:
-    - D3 is unused TX in SoftwareSerial
-    - Only RX from RDM6300 is needed
-*/
-
 #include <SoftwareSerial.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7735.h>
