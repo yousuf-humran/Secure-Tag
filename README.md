@@ -41,8 +41,8 @@ This project reads RFID tags and displays access status with a sleek user interf
 ## ⚙️ How It Works
 
 - On power-up, a welcome screen appears with:  
-  **`Bonjour Null Labz`** and  
-  **`project RFID scanner`**
+  **`Bonjour Developer`** and  
+  **`Project RFID Scanner`**
 - The screen prompts: **Scan RFID...** (blue text).
 - When an RFID tag is scanned:
   - ✅ If **authorized**, the screen shows:  
