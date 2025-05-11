@@ -70,8 +70,6 @@ You can customize the authorized tag list in the `.ino` file by modifying this s
 > long allowed_tags[] = {669262, 379461, 372014, 740380};
 > ```
 
-# Library Dependencies for RFID Access Control Project
-
 ## Library Dependencies
 The following libraries must be installed to compile and run the project:
 
