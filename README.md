@@ -1,21 +1,31 @@
-# 🔐 RFID Access Control - Secure Tag
+# Secure Tag – RFID Access Control System
 
-**An RFID access control system using Arduino Nano, RDM6300 RFID Reader, and ST7735 TFT Display.**  
-This project reads RFID tags and displays access status with a sleek user interface.
-
----
-
-## 📦 Devices Used
-
-- 🔌 **Arduino Nano**  
-- 📘 **RDM6300 RFID Reader (125kHz)**  
-- 🖥️ **1.8" TFT Display (ST7735)**
+**Secure Tag** is a lightweight, real-time access control solution built using the Arduino Nano, RDM6300 RFID Reader (125kHz), and ST7735 TFT Display. It scans RFID tags and displays access status through a user-friendly graphical interface. This project is suitable for prototype-level security, educational demonstrations, or basic access control systems.
 
 ---
 
-## 🧩 Wiring Diagram
+## Features
 
-### 🔌 TFT Display (ST7735)
+- Real-time RFID scanning and validation
+- Clear visual interface for access status
+- Configurable authorized tag list
+- Modular, open-source implementation
+
+---
+
+## Hardware Requirements
+
+| Component                  | Description                        |
+|---------------------------|------------------------------------|
+| Arduino Nano              | Microcontroller                    |
+| RDM6300 RFID Reader       | 125kHz RFID tag scanner            |
+| ST7735 TFT Display (1.8") | SPI-based color display            |
+
+---
+
+## Wiring Configuration
+
+### TFT Display (ST7735)
 
 | TFT Pin | Arduino Nano Pin |
 |---------|------------------|
@@ -28,61 +38,56 @@ This project reads RFID tags and displays access status with a sleek user interf
 | SCL     | D13              |
 | BL      | 5V               |
 
-### 📘 RDM6300 RFID Reader
+### RDM6300 RFID Reader
 
-| RDM6300 Pin | Arduino Nano Pin |
-|-------------|------------------|
-| VCC         | 5V               |
-| GND         | GND              |
-| TX          | D2               |
+| RFID Pin | Arduino Nano Pin         |
+|----------|--------------------------|
+| VCC      | 5V                       |
+| GND      | GND                      |
+| TX       | D2 (RX for SoftwareSerial) |
 
----
-
-## ⚙️ How It Works
-
-- On power-up, a welcome screen appears with:  
-  **`Bonjour Developer`** and  
-  **`Project RFID Scanner`**
-- The screen prompts: **Scan RFID...** (blue text).
-- When an RFID tag is scanned:
-  - ✅ If **authorized**, the screen shows:  
-    **Access GRANTED** (in green)
-  - ❌ If **unauthorized**, the screen shows:  
-    **Access DENIED** (in red)
-- After 2 seconds, the system returns to scan mode.
+> Note: Only the TX pin of the RDM6300 is required for data transmission.
 
 ---
 
-# 🧾 Authorized Tag List
+## System Workflow
+
+1. On power-up, the TFT screen displays a welcome message.
+2. The display then prompts: `Scan RFID...`
+3. Upon scanning:
+   - If the RFID tag is authorized, the screen displays:  
+     **Access GRANTED** (in green).
+   - If the tag is not recognized, the screen displays:  
+     **Access DENIED** (in red).
+4. After 2 seconds, the display returns to scan mode.
+
+---
+
+## Configuring Authorized Tags
 
 You can customize the authorized tag list in the `.ino` file by modifying this section:
 > ```cpp
 > long allowed_tags[] = {669262, 379461, 372014, 740380};
 > ```
 
-## 📚 Library Installation Guide
+# Library Dependencies for RFID Access Control Project
 
-To use this project, install the required libraries directly from the `.zip` files available in the [`Libraries` branch`](https://github.com/yousuf-humran/Secure-Tag/tree/Libraries).
+## Library Dependencies
+The following libraries must be installed to compile and run the project:
 
-### ✅ Steps
+## Installation Instructions
+1. Open the **Arduino IDE**.
+2. Go to:  
+   `Sketch → Include Library → Manage Libraries...`
+3. In the Library Manager, search for and install the following:
+   - **Adafruit GFX Library**
+   - **Adafruit ST7735 and ST7789 Library**
+   - **Adafruit BusIO**
 
-1. Go to the [`Libraries` branch`](https://github.com/yousuf-humran/Secure-Tag/tree/Libraries).
-2. Download the following `.zip` files:
-   - `Adafruit-GFX-Library-master.zip`
-   - `Adafruit_BusIO-master.zip`
-   - `Adafruit_ST7735-master.zip`
-   - `ArduinoCore-avr-master.zip`
-   - `rdm6300-master.zip`
-3. Open the **Arduino IDE**.
-4. Navigate to:  
-   **Sketch** → **Include Library** → **Add .ZIP Library...**
-5. One by one, select each downloaded `.zip` file to install.
-6. Restart the Arduino IDE if prompted.
+> The **SoftwareSerial** library is bundled with the Arduino AVR boards core and does not require separate installation.
 
-> 💡 Once installed, these libraries will be available for use in your sketches. No manual extraction needed.
+**Developed by:**  
+Yousuf Humran
 
----
 
-## 👨‍💻 Developed by
 
-**Yousuf Humran & The Null Labz Team**
