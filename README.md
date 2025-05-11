@@ -71,11 +71,25 @@ You can customize the authorized tag list in the `.ino` file by modifying this s
 > ```
 
 ## Library Dependencies
-The following libraries must be installed to compile and run the project:
 
-## Installation Instructions
-1. Open the **Arduino IDE**.
-2. Go to:  
+The following libraries are required to compile and run the project:
+
+1. **SoftwareSerial**  
+   - Used for communication with the RFID module via software serial ports.
+   
+2. **Adafruit GFX Library**  
+   - Provides graphics primitives for drawing shapes, text, and images on TFT displays.
+
+3. **Adafruit ST7735 and ST7789**  
+   - Enables support for ST7735 and ST7789-based TFT displays.
+
+4. **SPI**  
+   - Provides support for SPI communication, essential for interfacing with the TFT display.
+
+### Installation Instructions
+
+1. Open **Arduino IDE**.
+2. Navigate to:  
    `Sketch → Include Library → Manage Libraries...`
 3. In the Library Manager, search for and install the following:
    - **Adafruit GFX Library**
