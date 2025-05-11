@@ -1,7 +1,6 @@
 /*
   == RFID Project "Secure Tag" ==
-  Developed by: Yousuf Humran & The Null Labz Team
-  Version: 1.0
+  Developed by: Yousuf Humran
 
   📟 Devices Used:
     - Arduino Nano
@@ -75,11 +74,11 @@ void setup() {
   tft.setCursor(5, 30);
   tft.println("Bonjour");
   tft.setCursor(5, 55);
-  tft.println("Null Labz");
+  tft.println("Welcome");
 
   tft.setTextSize(1);
   tft.setCursor(10, 90);
-  tft.println("project RFID scanner");
+  tft.println("Project RFID Scanner");
 
   delay(3000); // Display welcome for 3 seconds
   showScanPrompt(); // Prompt for RFID scan
