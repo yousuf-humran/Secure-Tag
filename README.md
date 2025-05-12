@@ -1,6 +1,6 @@
-# Secure Tag – RFID Access Control System
+# RFID Access Control System
 
-**Secure Tag** is a lightweight, real-time access control solution built using the Arduino Nano, RDM6300 RFID Reader (125kHz), and ST7735 TFT Display. It scans RFID tags and displays access status through a user-friendly graphical interface. This project is suitable for prototype-level security, educational demonstrations, or basic access control systems.
+**RFID Access Control System** is a lightweight, real-time access control solution built using the Arduino Nano, RDM6300 RFID Reader (125kHz), and ST7735 TFT Display. It scans RFID tags and displays access status through a user-friendly graphical interface. This project is suitable for prototype-level security, educational demonstrations, or basic access control systems.
 
 ---
 
@@ -50,16 +50,43 @@
 
 ---
 
-## System Workflow
+## ✅ System Workflow
 
-1. On power-up, the TFT screen displays a welcome message.
-2. The display then prompts: `Scan RFID...`
-3. Upon scanning:
-   - If the RFID tag is authorized, the screen displays:  
-     **Access GRANTED** (in green).
-   - If the tag is not recognized, the screen displays:  
-     **Access DENIED** (in red).
-4. After 2 seconds, the display returns to scan mode.
+1. **Startup:**
+   - On power-up, the TFT screen displays:
+     ```
+     Booting...
+     Welcome
+     RFID Scanner
+     ```
+
+2. **Ready State:**
+   - After 3 seconds, the screen shows:
+     ```
+     Scan RFID...
+     ```
+
+3. **RFID Scan & Authentication:**
+   - When an RFID tag is scanned:
+     - 🔓 **If Authorized**:
+       ```
+       Access
+       GRANTED
+       ```
+       (Displayed in **green**)
+
+     - 🔒 **If Unauthorized**:
+       ```
+       Access
+       DENIED
+       ```
+       (Displayed in **red**)
+
+4. **Reset:**
+   - After 2 seconds, the screen returns to:
+     ```
+     Scan RFID...
+     ```
 
 ---
 
