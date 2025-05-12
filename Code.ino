@@ -41,13 +41,13 @@ void setup() {
   tft.setTextColor(ST7735_CYAN);
   tft.setTextSize(2);
   tft.setCursor(5, 30);
-  tft.println("Bonjour");
+  tft.println("Booting...");
   tft.setCursor(5, 55);
   tft.println("Welcome");
 
   tft.setTextSize(1);
   tft.setCursor(10, 90);
-  tft.println("Project RFID Scanner");
+  tft.println("RFID Scanner");
 
   delay(3000); // Display welcome for 3 seconds
   showScanPrompt(); // Prompt for RFID scan
